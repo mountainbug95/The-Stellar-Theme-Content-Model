@@ -1,0 +1,26 @@
+<!-- Second Section -->
+<section id="{{ include.section.section_id }}" class="main special">
+    <header class="major">
+        <h2>{{ include.section.title }}</h2>
+        {{ include.section.subtitle | markdownify }}
+    </header>
+    <ul class="statistics">
+        
+        {% for statistic in include.section.statistics_list %}
+            <li class="{% cycle 'style1', 'style2', 'style3', 'style4', 'style5' %}">
+                <span class="icon {{ statistic.icon }}"></span>
+                <strong>{{ statistic.number }}</strong> {{ statistic.title }}
+            </li>
+        {% endfor %}
+    </ul>
+    <p class="content">{{ include.section.text }}</p>
+    {% if include.section.actions %}
+        <footer class="major">
+            <ul class="actions special">
+                {% for action in include.section.actions %}
+                    <li><a href="{% assign expr_1 = action.url | starts_with: '#' %}{% if expr_1 %}{{ action.url }}{% else %}{{ action.url | link | relative_url }}{% endif %}" class="button{% if action.is_primary %} primary{% endif %}{% if action.is_scrolly %} scrolly{% endif %}">{{ action.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </footer>
+    {% endif %}
+</section>

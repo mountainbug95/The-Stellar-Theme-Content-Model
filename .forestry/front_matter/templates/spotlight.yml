@@ -1,0 +1,47 @@
+---
+label: Spotlight Section
+hide_body: true
+is_partial: true
+display_field: title
+fields:
+  - type: text
+    name: title
+    label: Section Title
+    description: The text displayed at the top of the section
+    default: Ipsum sed adipiscing
+    config:
+      required: true
+  - type: text
+    name: section_id
+    label: Section ID
+    default: spotlight
+    config:
+      required: true
+  - type: textarea
+    name: text
+    label: Spotlight Text
+    description: The text displayed below the section title
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: file
+    name: image
+    label: Spotlight Image
+    description: The image displayed to the right of the spotlight text
+  - type: field_group_list
+    name: actions
+    label: Spotlight Action Buttons
+    config:
+      labelField: label
+    fields:
+      - type: include
+        name: include_action
+        label: Action
+        template: action
+  - type: text
+    name: component
+    hidden: true
+    default: spotlight.html
+    config:
+      required: true

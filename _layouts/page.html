@@ -1,0 +1,16 @@
+---
+layout: body
+---
+
+    <!-- Main -->
+    <div id="main">
+        
+        <!-- Content -->
+        <section id="content" class="main">
+            {% if page.content_img_path %}
+                <span class="image main"><img src="{{ page.content_img_path | relative_url }}" alt="" /></span>
+            {% endif %}
+            {{ content }}
+        </section>
+        
+    </div>

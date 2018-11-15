@@ -1,0 +1,70 @@
+---
+label: Statistics Section
+hide_body: true
+is_partial: true
+display_field: title
+fields:
+  - type: text
+    name: title
+    label: Section Title
+    description: The text displayed at the top of the section
+    default: statistics
+    config:
+      required: true
+  - type: text
+    name: section_id
+    label: Section ID
+    default: statistics
+    config:
+      required: true
+  - type: textarea
+    name: subtitle
+    label: Section Subtitle
+    description: The text displayed below the section title
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: text
+    name: text
+    label: Section Text
+    description: The text displayed below the section stasistics
+  - type: field_group_list
+    name: statistics_list
+    label: Statistics
+    description: A list of statistics to be displayed in the section
+    config:
+      labelField: title
+    fields:
+      - type: text
+        name: title
+        label: Title
+        description: The title of the statistic
+        config:
+          required: true
+      - type: text
+        name: number
+        label: Statistic Number
+        description: The statistic value to be displayed
+        config:
+          required: true
+      - type: text
+        name: icon
+        label: Statistic Icon
+        description: The icon to be displayed above the statistic
+  - type: field_group_list
+    name: actions
+    label: Section Action Buttons
+    config:
+      labelField: label
+    fields:
+      - type: include
+        name: include_action
+        label: Action
+        template: action
+  - type: text
+    name: component
+    hidden: true
+    default: statistics.html
+    config:
+      required: true

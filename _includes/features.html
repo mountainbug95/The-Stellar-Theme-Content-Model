@@ -1,0 +1,24 @@
+<!-- First Section -->
+<section id="{{ include.section.section_id }}" class="main special">
+    <header class="major">
+        <h2>{{ include.section.title }}</h2>
+    </header>
+    <ul class="features">
+        {% for feature in include.section.features_list %}
+            <li>
+                <span class="icon major {{ feature.icon_style }} {{ feature.icon }}"></span>
+                <h3>{{ feature.title }}</h3>
+                {{ feature.subtitle | markdownify }}
+            </li>
+        {% endfor %}
+    </ul>
+    {% if include.section.actions %}
+        <footer class="major">
+            <ul class="actions special">
+                {% for action in include.section.actions %}
+                    <li><a href="{% assign expr_1 = action.url | starts_with: '#' %}{% if expr_1 %}{{ action.url }}{% else %}{{ action.url | link | relative_url }}{% endif %}" class="button{% if action.is_primary %} primary{% endif %}{% if action.is_scrolly %} scrolly{% endif %}">{{ action.label }}</a></li>
+                {% endfor %}
+            </ul>
+        </footer>
+    {% endif %}
+</section>

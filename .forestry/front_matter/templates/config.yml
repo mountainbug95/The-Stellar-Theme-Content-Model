@@ -1,0 +1,116 @@
+---
+label: Config
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: Site title
+    config:
+      required: true
+  - type: field_group
+    name: social
+    label: Social Section Configuration
+    description: The social section displayed in the site footer
+    fields:
+      - type: text
+        name: title
+        label: Section Title
+      - type: textarea
+        name: text
+        label: Section Text
+        description: The text displayed below the section title
+        config:
+          wysiwyg: true
+          schema:
+            format: markdown
+      - type: field_group_list
+        name: actions
+        label: Section Action Buttons
+        config:
+          labelField: label
+        fields:
+          - type: include
+            name: include_action
+            label: Action
+            template: action
+      - type: field_group
+        name: contact_methods
+        label: Contact Methods Section
+        fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+            description: Displays the contact methods section in the site footer
+            default: false
+          - type: text
+            name: title
+            label: Section Title
+          - type: field_group_list
+            name: contact_list
+            label: Contact Methods
+            description: A list of contact methods to be displayed in the section
+            config:
+              labelField: title
+            fields:
+              - type: text
+                name: title
+                label: Method Title
+                config:
+                  required: true
+              - type: text
+                name: text
+                label: Method Description
+                config:
+                  required: true
+              - type: boolean
+                name: enable_url
+                label: Enable URL
+                description: >-
+                  Allows the contact method description to be treated as a
+                  hyperlink to the address provided in the URL field
+                default: false
+              - type: text
+                name: url
+                label: URL
+  - type: field_group
+    name: footer
+    label: Footer Configuration
+    fields:
+      - type: text
+        name: copyright
+        label: Copyright Text
+        description: The copyright text displayed in the bottom of the page footer
+  - type: select
+    name: palette
+    label: Color Palette
+    default: cyan
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - cyan
+        - green
+  - type: field_group
+    name: palettes
+    label: Color Palettes Configuration
+    description: The settings for the color palettes
+    fields:
+      - type: field_group
+        name: cvyan
+        label: Cyan Palette
+        fields:
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette
+      - type: field_group
+        name: green
+        label: Green Palette
+        fields:
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette

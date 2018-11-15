@@ -1,0 +1,133 @@
+---
+---
+
+// Misc.
+$misc: (
+    z-index-base:		10000
+);
+
+// Duration.
+$duration: (
+    transition:			0.2s
+);
+
+// Size.
+$size: (
+    border-radius:		8px,
+    border-radius-main:	0.25em,
+    element-height:		2.75em,
+    element-margin:		2em,
+    inner:				64em
+);
+
+// Font.
+$font: (
+    family:				('Source Sans Pro', Helvetica, sans-serif),
+    family-fixed:		('Courier New', monospace),
+    weight:				300,
+    weight-bold:		400,
+    letter-spacing:		-0.025em
+);
+
+// Palette.
+{% assign palette = site.palettes[site.palette].sass %}
+$palette: (
+    bg:					#935d8c,
+    fg:					rgba(255,255,255,0.65),
+    fg-bold:			#ffffff,
+    fg-light:			rgba(255,255,255,0.5),
+    border:				rgba(255,255,255,0.35),
+    border-bg:			rgba(255,255,255,0.075),
+    border2:			rgba(255,255,255,0.75),
+    border2-bg:			rgba(255,255,255,0.2),
+
+    invert: (
+        bg:				#ffffff,
+        bg-alt:			#f7f7f7,
+        fg:				#636363,
+        fg-bold:		#636363,
+        fg-light:		rgba(99,99,99,0.25),
+        border:			#dddddd,
+        border-bg:		rgba(222,222,222,0.25),
+        border2:		#dddddd,
+        border2-bg:		rgba(222,222,222,0.5),
+    ),
+
+    accent:				{{ palette.accent }},
+    accent1:			{{ palette.accent1 }},
+    accent2:			{{ palette.accent2 }},
+    accent3:			{{ palette.accent3 }},
+    accent4:			{{ palette.accent4 }},
+    accent5:			{{ palette.accent5 }},
+    bg1:				{{ palette.bg1 }},
+    bg2:				{{ palette.bg2 }}
+);
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+
+/*
+	Stellar by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		xlarge:   ( 1281px,  1680px ),
+		large:    ( 981px,   1280px ),
+		medium:   ( 737px,   980px  ),
+		small:    ( 481px,   736px  ),
+		xsmall:   ( 361px,   480px  ),
+		xxsmall:  ( null,    360px  )
+	));
+
+// Mixins.
+
+	@mixin color($p) {
+		@include color-typography($p);
+		@include color-box($p);
+		@include color-button($p);
+		@include color-form($p);
+		@include color-icon($p);
+		@include color-list($p);
+		@include color-section($p);
+		@include color-table($p);
+		@include color-spotlight($p);
+	}
+
+// Base.
+
+	@import 'base/reset';
+	@import 'base/page';
+	@import 'base/typography';
+
+// Component.
+
+	@import 'components/row';
+	@import 'components/box';
+	@import 'components/button';
+	@import 'components/form';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/actions';
+	@import 'components/icons';
+	@import 'components/section';
+	@import 'components/table';
+	@import 'components/features';
+	@import 'components/statistics';
+	@import 'components/spotlight';
+
+// Layout.
+
+	@import 'layout/header';
+	@import 'layout/nav';
+	@import 'layout/main';
+	@import 'layout/footer';
+	@import 'layout/wrapper';

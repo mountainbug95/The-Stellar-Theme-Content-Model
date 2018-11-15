@@ -1,0 +1,28 @@
+---
+label: Palette
+is_partial: true
+fields:
+  - type: file
+    name: logo_file
+    label: Landing Page Logo
+    description: The logo displayed at the top of the landing page
+  - type: field_group
+    name: sass
+    hidden: true
+    fields:
+      - type: text
+        name: accent
+      - type: text
+        name: accent1
+      - type: text
+        name: accent2
+      - type: text
+        name: accent3
+      - type: text
+        name: accent4
+      - type: text
+        name: accent5
+      - type: text
+        name: bg1
+      - type: text
+        name: bg2

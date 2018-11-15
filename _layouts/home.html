@@ -1,0 +1,11 @@
+---
+layout: body
+---
+
+    <!-- Main -->
+    <div id="main">
+        {% for section in page.sections %}
+            
+            {% include {{ section.component }} section=section page=page %}
+        {% endfor %}
+    </div>

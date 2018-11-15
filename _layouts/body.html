@@ -1,0 +1,18 @@
+---
+layout: base
+---
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    {% include header.html %}
+    
+    {% if page.page_nav.enabled %}
+        {% include nav.html %}
+    {% endif %}
+
+    {{ content }}
+
+    {% include footer.html %}
+    
+</div>

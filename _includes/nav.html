@@ -1,0 +1,8 @@
+<!-- Nav -->
+<nav id="{{ page.page_nav.section_id }}">
+    <ul>
+        {% for item in page.page_nav.nav_items %}
+            <li><a href="{% assign expr_1 = item.url | starts_with: '#' %}{% if expr_1 %}{{ item.url }}{% else %}{{ item.url | link | relative_url }}{% endif %}"{% if forloop.index == 1 %} class="active"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>

@@ -1,0 +1,73 @@
+title: Stellar
+baseurl: /
+social:
+  title: Aliquam sed mauris
+  text: >-
+    Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna
+    adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet,
+    nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt
+    odio.
+  actions:
+    - label: Learn More
+      url: generic.md
+      is_scrolly: false
+      is_primary: false
+  contact_methods:
+    enabled: true
+    title: Etiam feugiat
+    contact_list:
+      - title: Address
+        text: '1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA'
+      - title: Phone
+        text: (000) 000-0000 x 0000
+      - title: Email
+        text: information@untitled.tld
+        enable_url: true
+        url: '#'
+    social_icons:
+      - title: Twitter
+        icon: fa-twitter
+        url: '#'
+      - title: Facebook
+        icon: fa-facebook
+        url: '#'
+      - title: Instagram
+        icon: fa-instagram
+        url: '#'
+      - title: GitHub
+        icon: fa-github
+        url: '#'
+      - title: Dribbble
+        icon: fa-dribbble
+        url: '#'
+footer:
+  copyright: '&copy; Stellar.'
+palette: cyan
+palettes:
+  cyan:
+    logo_file: images/logo-cyan.svg
+    sass:
+      accent: '#8cc9f0'
+      accent1: '#efa8b0'
+      accent2: '#c79cc8'
+      accent3: '#a89cc8'
+      accent4: '#9bb2e1'
+      accent5: '#8cc9f0'
+      bg1: '#e37682'
+      bg2: '#5f4d93'
+  green:
+    logo_file: images/logo-green.svg
+    sass:
+      accent: '#7fd2cc'
+      accent1: '#9197d7'
+      accent2: '#9bacde'
+      accent3: '#96b9e7'
+      accent4: '#89c4e4'
+      accent5: '#7fd2cc'
+      bg1: '#838ac4'
+      bg2: '#8aaddb'
+sass:
+  indentWidth: 4
+  style: nested
+  precision: 10
+permalink: '/posts/:slug:output_ext'

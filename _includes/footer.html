@@ -1,0 +1,40 @@
+<!-- Footer -->
+<footer id="footer">
+    <section>
+        <h2>{{ site.social.title }}</h2>
+        {{ site.social.text | markdownify }}
+        {% if site.social.actions %}
+            <ul class="actions">
+                {% for action in site.social.actions %}
+                    <li><a href="{% assign expr_1 = action.url | starts_with: '#' %}{% if expr_1 %}{{ action.url }}{% else %}{{ action.url | link | relative_url }}{% endif %}" class="button{% if action.is_primary %} primary{% endif %}{% if action.is_scrolly %} scrolly{% endif %}">{{ action.label }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+    {% if site.social.contact_methods.enabled %}
+        <section>
+            <h2>{{ site.social.contact_methods.title }}</h2>
+            {% if site.social.contact_methods.contact_list %}
+                <dl class="alt">
+                    {% for item in site.social.contact_methods.contact_list %}
+                        {% if item.enable_url %}
+                            <dt>{{ item.title }}</dt>
+                            <dd><a href="{{ item.url }}">{{ item.text }}</a></dd>
+                        {% else %}
+                            <dt>{{ item.title }}</dt>
+                            <dd>{{ item.text }}</dd>
+                        {% endif %}
+                    {% endfor %}
+                </dl>
+            {% endif %}
+            {% if site.social.contact_methods.social_icons %}
+            <ul class="icons">
+                {% for item in site.social.contact_methods.social_icons %}
+                    <li><a href="{{ item.url }}" class="icon {{ item.icon }} alt"><span class="label">{{ item.title }}</span></a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </section>
+    {% endif %}
+    <p class="copyright">{{ site.footer.copyright }}</p>
+</footer>
