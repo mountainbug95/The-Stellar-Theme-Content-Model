@@ -29,7 +29,7 @@ sections:
         is_scrolly: false
         is_primary: false
     component: spotlight.html
-    template: spotlight
+    type: spotlight
   - title: Magna veroeros
     section_id: features
     features_list:
@@ -57,7 +57,7 @@ sections:
         is_scrolly: false
         is_primary: false
     component: features.html
-    template: features
+    type: features
   - title: Ipsum consequat
     section_id: statistics
     subtitle: |-
@@ -95,7 +95,7 @@ sections:
         is_scrolly: false
         is_primary: false
     component: statistics.html
-    template: statistics
+    type: statistics
   - title: Congue imperdiet
     subtitle: |-
       Donec imperdiet consequat consequat. Suspendisse feugiat congue  
@@ -111,6 +111,6 @@ sections:
         is_scrolly: false
         is_primary: false
     component: cta.html
-    template: cta
+    type: cta
 layout: home
 ---

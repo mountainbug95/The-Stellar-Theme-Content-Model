@@ -123,7 +123,7 @@ collections:
             label: Color Palettes Configuration
             hint: The settings for the color palettes
             fields:
-              - name: cvyan
+              - name: cyan
                 widget: object
                 required: false
                 label: Cyan Palette
