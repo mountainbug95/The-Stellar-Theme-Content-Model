@@ -99,7 +99,7 @@ fields:
     description: The settings for the color palettes
     fields:
       - type: field_group
-        name: cvyan
+        name: cyan
         label: Cyan Palette
         fields:
           - type: include
