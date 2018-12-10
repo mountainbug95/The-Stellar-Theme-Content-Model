@@ -41,6 +41,7 @@ fields:
         template: action
   - type: text
     name: component
+    label: Section Component
     hidden: true
     default: spotlight.html
     config:
