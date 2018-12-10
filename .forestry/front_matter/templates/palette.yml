@@ -8,21 +8,30 @@ fields:
     description: The logo displayed at the top of the landing page
   - type: field_group
     name: sass
+    label: SASS
     hidden: true
     fields:
       - type: text
         name: accent
+        label: accent
       - type: text
         name: accent1
+        label: accent1
       - type: text
         name: accent2
+        label: accent2
       - type: text
         name: accent3
+        label: accent3
       - type: text
         name: accent4
+        label: accent4
       - type: text
         name: accent5
+        label: accent5
       - type: text
         name: bg1
+        label: BG1
       - type: text
         name: bg2
+        label: BG2
