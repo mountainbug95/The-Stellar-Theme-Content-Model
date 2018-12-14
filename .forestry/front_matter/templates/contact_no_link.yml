@@ -1,0 +1,14 @@
+---
+label: Contact Method Without Link
+is_partial: true
+fields:
+  - type: text
+    name: title
+    label: Method Title
+    config:
+      required: true
+  - type: text
+    name: text
+    label: Method Description
+    config:
+      required: true

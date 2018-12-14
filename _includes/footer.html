@@ -17,10 +17,10 @@
             {% if site.social.contact_methods.contact_list %}
                 <dl class="alt">
                     {% for item in site.social.contact_methods.contact_list %}
-                        {% if item.enable_url %}
+                        {% if item.type == 'contact_with_link' %}
                             <dt>{{ item.title }}</dt>
                             <dd><a href="{{ item.url }}">{{ item.text }}</a></dd>
-                        {% else %}
+                        {% elsif item.type == 'contact_no_link' %}
                             <dt>{{ item.title }}</dt>
                             <dd>{{ item.text }}</dd>
                         {% endif %}

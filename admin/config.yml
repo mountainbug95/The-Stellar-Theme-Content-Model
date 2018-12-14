@@ -136,6 +136,7 @@ collections:
                   - name: sass
                     widget: hidden
                     required: false
+                    label: SASS
               - name: green
                 widget: object
                 required: false
@@ -149,6 +150,7 @@ collections:
                   - name: sass
                     widget: hidden
                     required: false
+                    label: SASS
   - name: home
     label: Home
     files:
@@ -259,6 +261,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: spotlight.html
               - name: features
                 widget: object
@@ -338,6 +341,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: features.html
               - name: statistics
                 widget: object
@@ -416,6 +420,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: statistics.html
               - name: cta
                 widget: object
@@ -468,6 +473,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: cta.html
           - name: layout
             widget: hidden

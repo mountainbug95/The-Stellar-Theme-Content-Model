@@ -47,33 +47,13 @@ fields:
           - type: text
             name: title
             label: Section Title
-          - type: field_group_list
+          - type: blocks
             name: contact_list
             label: Contact Methods
             description: A list of contact methods to be displayed in the section
-            config:
-              labelField: title
-            fields:
-              - type: text
-                name: title
-                label: Method Title
-                config:
-                  required: true
-              - type: text
-                name: text
-                label: Method Description
-                config:
-                  required: true
-              - type: boolean
-                name: enable_url
-                label: Enable URL
-                description: >-
-                  Allows the contact method description to be treated as a
-                  hyperlink to the address provided in the URL field
-                default: false
-              - type: text
-                name: url
-                label: URL
+            template_types:
+              - contact_with_link
+              - contact_no_link
   - type: field_group
     name: footer
     label: Footer Configuration
