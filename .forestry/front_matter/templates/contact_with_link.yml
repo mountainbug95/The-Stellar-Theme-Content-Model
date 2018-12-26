@@ -1,26 +1,27 @@
 ---
 label: Contact Method With Link
+hide_body: false
 is_partial: true
 display_field: title
 fields:
-  - type: text
-    name: type
-    label: Type
-    description: The type identifier of this object inside block lists
-    hidden: true
-    default: contact_with_link
-    config:
-      required: true
-  - type: text
-    name: title
-    label: Method Title
-    config:
-      required: true
-  - type: text
-    name: text
-    label: Method Description
-    config:
-      required: true
-  - type: text
-    name: url
-    label: URL
+- type: text
+  name: type
+  label: Type
+  description: The type identifier of this object inside block lists
+  hidden: true
+  default: contact_with_link
+  config:
+    required: true
+- type: text
+  name: title
+  label: Method Title
+  config:
+    required: true
+- type: text
+  name: text
+  label: Method Description
+  config:
+    required: true
+- type: text
+  name: url
+  label: URL

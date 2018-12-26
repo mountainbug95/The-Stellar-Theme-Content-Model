@@ -3,66 +3,66 @@ label: Home
 hide_body: true
 is_partial: false
 fields:
+- type: text
+  name: title
+  label: Page Title
+  description: The text displayed at the top of the page
+  config:
+    required: true
+- type: textarea
+  name: subtitle
+  label: Page Subtitle
+  description: The text displayed below the page title
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: field_group
+  name: page_nav
+  label: Page Nav Bar
+  description: The nav bar displayed below the page banner
+  fields:
+  - type: boolean
+    name: enabled
+    label: Enabled
+    description: Displays the page nav bar
+    default: false
   - type: text
-    name: title
-    label: Page Title
-    description: The text displayed at the top of the page
+    name: section_id
+    label: Nav Section ID
     config:
       required: true
-  - type: textarea
-    name: subtitle
-    label: Page Subtitle
-    description: The text displayed below the page title
+  - type: field_group_list
+    name: nav_items
+    label: Nav Bar Entries
+    description: A list of entries to be displayed in the nav bar
     config:
-      wysiwyg: true
-      schema:
-        format: markdown
-  - type: field_group
-    name: page_nav
-    label: Page Nav Bar
-    description: The nav bar displayed below the page banner
+      labelField: title
     fields:
-      - type: boolean
-        name: enabled
-        label: Enabled
-        description: Displays the page nav bar
-        default: false
-      - type: text
-        name: section_id
-        label: Nav Section ID
-        config:
-          required: true
-      - type: field_group_list
-        name: nav_items
-        label: Nav Bar Entries
-        description: A list of entries to be displayed in the nav bar
-        config:
-          labelField: title
-        fields:
-          - type: text
-            name: title
-            label: Entry Label
-            description: The text displayed in the nav bar
-            config:
-              required: true
-          - type: text
-            name: url
-            label: URL
-  - type: blocks
-    name: sections
-    label: Sections
-    description: Home Sections
-    template_types:
-      - spotlight
-      - features
-      - statistics
-      - cta
-  - type: text
-    name: layout
-    label: Layout
-    hidden: true
-    default: home
-    config:
-      required: true
+    - type: text
+      name: title
+      label: Entry Label
+      description: The text displayed in the nav bar
+      config:
+        required: true
+    - type: text
+      name: url
+      label: URL
+- type: blocks
+  name: sections
+  label: Sections
+  description: Home Sections
+  template_types:
+  - spotlight
+  - features
+  - statistics
+  - cta
+- type: text
+  name: layout
+  label: Layout
+  hidden: true
+  default: home
+  config:
+    required: true
 pages:
-  - index.md
+- index.md
