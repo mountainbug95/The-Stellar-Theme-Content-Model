@@ -78,27 +78,35 @@ collections:
                     required: false
                     label: Contact Methods
                     hint: A list of contact methods to be displayed in the section
-                    fields:
-                      - name: title
-                        widget: string
-                        required: true
-                        label: Method Title
-                      - name: text
-                        widget: string
-                        required: true
-                        label: Method Description
-                      - name: enable_url
-                        widget: boolean
-                        required: false
-                        label: Enable URL
-                        default: false
-                        hint: >-
-                          Allows the contact method description to be treated as
-                          a hyperlink to the address provided in the URL field
-                      - name: url
-                        widget: string
-                        required: false
-                        label: URL
+                    types:
+                      - name: contact_with_link
+                        widget: object
+                        label: Contact Method With Link
+                        fields:
+                          - name: title
+                            widget: string
+                            required: true
+                            label: Method Title
+                          - name: text
+                            widget: string
+                            required: true
+                            label: Method Description
+                          - name: url
+                            widget: string
+                            required: false
+                            label: URL
+                      - name: contact_no_link
+                        widget: object
+                        label: Contact Method Without Link
+                        fields:
+                          - name: title
+                            widget: string
+                            required: true
+                            label: Method Title
+                          - name: text
+                            widget: string
+                            required: true
+                            label: Method Description
           - name: footer
             widget: object
             required: false

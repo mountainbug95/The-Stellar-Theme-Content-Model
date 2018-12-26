@@ -3,6 +3,14 @@ label: Contact Method Without Link
 is_partial: true
 fields:
   - type: text
+    name: type
+    label: Type
+    description: The type identifier of this object inside block lists
+    hidden: true
+    default: contact_no_link
+    config:
+      required: true
+  - type: text
     name: title
     label: Method Title
     config:

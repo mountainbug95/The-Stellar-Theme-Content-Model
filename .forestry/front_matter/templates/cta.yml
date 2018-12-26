@@ -5,6 +5,14 @@ is_partial: true
 display_field: title
 fields:
   - type: text
+    name: type
+    label: Type
+    description: The type identifier of this object inside block lists
+    hidden: true
+    default: cta
+    config:
+      required: true
+  - type: text
     name: title
     label: Section Title
     description: The text displayed at the top of the section
