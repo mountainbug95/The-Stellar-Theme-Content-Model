@@ -1,6 +1,7 @@
 ---
 label: Contact Method Without Link
 is_partial: true
+display_field: title
 fields:
   - type: text
     name: type
